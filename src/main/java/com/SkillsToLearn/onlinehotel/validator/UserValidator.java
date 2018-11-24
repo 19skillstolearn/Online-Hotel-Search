@@ -1,6 +1,8 @@
 package com.SkillsToLearn.onlinehotel.validator;
 
 import org.apache.commons.validator.EmailValidator;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
@@ -9,6 +11,7 @@ import com.SkillsToLearn.onlinehotel.dao.UserDao;
 import com.SkillsToLearn.onlinehotel.formbean.UserFormBean;
 import com.SkillsToLearn.onlinehotel.model.UserBean;
 
+@Service
 public class UserValidator implements Validator{
 	
 	@SuppressWarnings("deprecation")

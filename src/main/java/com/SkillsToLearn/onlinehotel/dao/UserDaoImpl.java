@@ -8,11 +8,13 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
 import com.SkillsToLearn.onlinehotel.formbean.UserFormBean;
 import com.SkillsToLearn.onlinehotel.model.Gender;
 import com.SkillsToLearn.onlinehotel.model.UserBean;
 
+@Component
 public class UserDaoImpl implements UserDao{
 	
 	@Autowired

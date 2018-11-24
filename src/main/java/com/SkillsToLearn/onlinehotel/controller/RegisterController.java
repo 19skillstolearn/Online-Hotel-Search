@@ -2,12 +2,14 @@ package com.SkillsToLearn.onlinehotel.controller;
 
 import java.util.List;
 
+import com.SkillsToLearn.onlinehotel.dao.UserDao;
 import com.SkillsToLearn.onlinehotel.dao.UserDaoImpl;
 import com.SkillsToLearn.onlinehotel.formbean.UserFormBean;
 import com.SkillsToLearn.onlinehotel.validator.UserValidator;
 import com.SkillsToLearn.onlinehotel.model.UserBean;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,10 +23,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 @Controller
+@Component("userDao")
 public class RegisterController {
 	
 	@Autowired
-	private UserDaoImpl userDao;
+	private UserDao userDao;
 	@Autowired
 	private UserValidator userValidate;
 	
